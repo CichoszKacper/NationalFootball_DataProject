@@ -48,12 +48,6 @@ def find_draw(df):
             array_away.append('No draw')
     return array_home, array_away
 
-# def find_total_games(df):
-#     array_total = []
-#
-#     for i, row in df.iterrows():
-#         if row['home_team']
-#
 
 # Function to display folium Choropleth map
 def map_display(map, map_result, column_to_check, legend_text):
