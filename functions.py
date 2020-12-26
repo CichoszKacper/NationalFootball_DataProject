@@ -99,6 +99,8 @@ def clean_data(column_to_check):
         draw_teams = results['draw_home'].append(results['draw_away']).reset_index(name='draw')
         countdraws = draw_teams.value_counts(draw_teams[column_to_check]).reset_index(name='Counts')
         countdraws = countdraws[countdraws[column_to_check] != 'No draw']
+
+        #Display in streamlit
         st.write(countdraws)
         countdraws = world.merge(countdraws, how="inner", left_on='name', right_on=column_to_check)
         map_result = countdraws
