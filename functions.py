@@ -48,6 +48,13 @@ def find_draw(df):
             array_away.append('No draw')
     return array_home, array_away
 
+# def find_total_games(df):
+#     array_total = []
+#
+#     for i, row in df.iterrows():
+#         if row['home_team']
+#
+
 # Function to display folium Choropleth map
 def map_display(map, map_result, column_to_check, legend_text):
     folium.Choropleth(
@@ -96,6 +103,31 @@ def clean_data(column_to_check):
         countdraws = world.merge(countdraws, how="inner", left_on='name', right_on=column_to_check)
         map_result = countdraws
 
+    # Clean data if requested to find % of wins
+    if column_to_check == "percentage wins":
+        #creating table of all countries that ever played
+        total_games = results['home_team'].append(results['away_team']).reset_index(name=column_to_check)
+        counttotal = total_games.value_counts(total_games[column_to_check]).reset_index(name='Counts')
+        counttotal = counttotal[counttotal[column_to_check] != 'No draw']
+
+        #creating table of all teams that ever won
+        results["wins"] = find_winners_losers(results, "winner")
+        countwinners = results.value_counts(results["wins"]).reset_index(name='Counts')
+        countwinners = countwinners[countwinners["wins"] != 'Draw']
+
+        # Joining both tables based on the country name
+        joined_tables = countwinners.merge(counttotal, left_on="wins",right_on=column_to_check)
+        joined_tables['Counts'] = (joined_tables['Counts_x'] / joined_tables['Counts_y'] ) * 100
+        wins_percentage = joined_tables[["wins","Counts_y","Counts"]]
+        wins_percentage.columns = ["Team", "Games played","Percentage of wins"]
+        wins_percentage = wins_percentage.sort_values("Percentage of wins", ascending=False)
+
+        #Displaying table in streamlit
+        st.write(wins_percentage)
+        wins_percentage.columns = [column_to_check, "Games played","Counts"]
+        wins_percentage = world.merge(wins_percentage, how="inner", left_on='name', right_on=column_to_check)
+        map_result = wins_percentage
+
     return map_result
 
 
@@ -116,6 +148,11 @@ def select_statistic(statistic_choice):
     if statistic_choice == 'Number of draws':
         column_to_check = 'draw'
         legend_text = 'Number of international draws'
+        map_result = clean_data(column_to_check)
+
+    if statistic_choice == 'Percentage of wins':
+        column_to_check = 'percentage wins'
+        legend_text = 'Percentage of wins'
         map_result = clean_data(column_to_check)
 
     return map_result, column_to_check, legend_text
