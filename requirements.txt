@@ -1,6 +1,110 @@
-# Dependencies for generating/publishing Python binaries.
-bob-builder==0.0.19
-
-# Sub-dependencies of bob-builder.
+altair @ file:///tmp/build/80754af9/altair_1599835197802/work
+argh==0.26.2
+argon2-cffi @ file:///C:/ci/argon2-cffi_1596828549974/work
+astor==0.8.1
+async-generahtor==1.10
+attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work
+backcall==0.2.0
+base58 @ file:///home/conda/feedstock_root/build_artifacts/base58_1591738914578/work
+bleach @ file:///tmp/build/80754af9/bleach_1600439572647/work
+blinker==1.4
 boto==2.49.0
+boto3 @ file:///tmp/build/80754af9/boto3_1608243802279/work
+botocore @ file:///home/conda/feedstock_root/build_artifacts/botocore_1608327760158/work
+branca @ file:///home/conda/feedstock_root/build_artifacts/branca_1588860304135/work
+brotlipy==0.7.0
+cachetools @ file:///tmp/build/80754af9/cachetools_1607706694405/work
+certifi==2020.12.5
+cffi @ file:///C:/ci/cffi_1606255207413/work
+chardet @ file:///C:/ci/chardet_1607706910910/work
+click==7.1.2
+click-plugins==1.1.1
+cligj==0.7.1
+colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
+cryptography @ file:///C:/ci/cryptography_1607639129468/work
+decorator==4.4.2
+defusedxml==0.6.0
 docopt==0.6.2
+entrypoints==0.3
+Fiona==1.8.13.post1
+folium @ file:///home/conda/feedstock_root/build_artifacts/folium_1588861378954/work
+GDAL==3.0.2
+geopandas @ file:///tmp/build/80754af9/geopandas_1594937497867/work
+gitdb==4.0.5
+GitPython @ file:///tmp/build/80754af9/gitpython_1603928675344/work
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1602276842396/work
+ipykernel @ file:///C:/ci/ipykernel_1596208728219/work/dist/ipykernel-5.3.4-py3-none-any.whl
+ipython @ file:///C:/ci/ipython_1604101327119/work
+ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1601490159889/work
+jedi==0.17.0
+Jinja2==2.11.2
+jmespath @ file:///tmp/build/80754af9/jmespath_1594304593830/work
+jsonschema @ file:///tmp/build/80754af9/jsonschema_1602607155483/work
+jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1601311786391/work
+jupyter-core @ file:///C:/ci/jupyter_core_1606130908768/work
+jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
+MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
+mistune @ file:///C:/ci/mistune_1594373272338/work
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+munch==2.5.0
+nbclient @ file:///tmp/build/80754af9/nbclient_1602783176460/work
+nbconvert @ file:///C:/ci/nbconvert_1601914921407/work
+nbformat @ file:///tmp/build/80754af9/nbformat_1602783287752/work
+nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1606153767164/work
+notebook @ file:///C:/ci/notebook_1607976487231/work
+numpy @ file:///C:/ci/numpy_and_numpy_base_1603468620949/work
+olefile==0.46
+packaging @ file:///tmp/build/80754af9/packaging_1607971725249/work
+pandas @ file:///C:/ci/pandas_1608063532995/work
+pandocfilters @ file:///C:/ci/pandocfilters_1605102427207/work
+parso @ file:///tmp/build/80754af9/parso_1607623074025/work
+pathtools==0.1.2
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow @ file:///C:/ci/pillow_1603821929285/work
+prometheus-client @ file:///tmp/build/80754af9/prometheus_client_1606344362066/work
+prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1602688806899/work
+protobuf==3.13.0
+pyarrow==0.11.1
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pydeck @ file:///home/conda/feedstock_root/build_artifacts/pydeck_1603714958102/work
+Pygments @ file:///tmp/build/80754af9/pygments_1607368905949/work
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
+pyparsing==2.4.7
+pyproj==2.6.1.post1
+pyrsistent @ file:///C:/ci/pyrsistent_1600123688363/work
+PySocks @ file:///C:/ci/pysocks_1594394709107/work
+python-dateutil==2.8.1
+pytz @ file:///tmp/build/80754af9/pytz_1606604771399/work
+pywin32==227
+pywinpty==0.5.7
+PyYAML==5.3.1
+pyzmq==20.0.0
+requests @ file:///tmp/build/80754af9/requests_1608241421344/work
+Rtree==0.9.4
+s3transfer @ file:///tmp/build/80754af9/s3transfer_1606864127951/work
+Send2Trash @ file:///tmp/build/80754af9/send2trash_1607525499227/work
+Shapely==1.7.1
+six @ file:///C:/ci/six_1605205426665/work
+smmap @ file:///tmp/build/80754af9/smmap_1597003226630/work
+streamlit @ file:///home/conda/feedstock_root/build_artifacts/streamlit_1608228664317/work
+streamlit-folium==0.1.0
+terminado==0.9.1
+testpath==0.4.4
+toml @ file:///tmp/build/80754af9/toml_1592853716807/work
+toolz @ file:///tmp/build/80754af9/toolz_1601054250827/work
+tornado @ file:///C:/ci/tornado_1606935947090/work
+traitlets @ file:///tmp/build/80754af9/traitlets_1602787416690/work
+tzlocal @ file:///C:/ci/tzlocal_1597435800236/work
+urllib3 @ file:///tmp/build/80754af9/urllib3_1606938623459/work
+validators @ file:///tmp/build/80754af9/validators_1605213922083/work
+watchdog @ file:///C:/ci/watchdog_1606939375616/work
+wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+webencodings==0.5.1
+widgetsnbextension==3.5.1
+win-inet-pton @ file:///C:/ci/win_inet_pton_1605306165655/work
+wincertstore==0.2
+zipp @ file:///tmp/build/80754af9/zipp_1604001098328/work
